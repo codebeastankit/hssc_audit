@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    tools:context=".Activity.LoginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/v_rl2"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/v_rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/v_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/hssc_logo"
+                android:visibility="visible"/>
+
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/v_rllogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_rl1"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="20dp"
+                        android:drawableLeft="@drawable/usericon"
+                        android:drawablePadding="5dp"
+                        android:hint="username"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="#b7b5b5"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/username"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/passwordicon"
+                        android:drawablePadding="5dp"
+                        android:hint="password"
+
+                        android:inputType="textWebPassword"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="#b7b5b5"
+                        android:textSize="18dp" />
+
+                    <CheckBox
+                        android:id="@+id/check_showPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/password"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Show Password"
+                        android:textColor="#000" />
+
+                    <Button
+                        android:id="@+id/login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/check_showPass"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:theme="@style/PrimaryButton" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/login_button"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dip"
+                        android:layout_marginTop="4dip"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Forgot Password?"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimaryDark"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </RelativeLayout>
+        </ScrollView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/v_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dip">
+
+        <ImageView
+            android:id="@+id/v_building"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/v_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/v_building"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/v_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/v_image_view"
+            android:background="@color/colorPrimaryDark"></View>
+
+        <TextView
+            android:id="@+id/v_servermsg"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/v_view1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="Connecting Server!! Please Wait..."
+            android:textColor="@color/white"
+            android:textSize="16dip"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

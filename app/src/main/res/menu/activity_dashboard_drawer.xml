@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard_icon"
+            android:title="Dashboard" />
+
+
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/audit"
+            android:title="Inspection" />
+        <item
+            android:id="@+id/job_role"
+            android:icon="@drawable/jobrole"
+            android:title="Equipment List" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/upload"
+            android:title="Upload" />
+
+
+
+    </group>
+    <group android:id="@+id/log">
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

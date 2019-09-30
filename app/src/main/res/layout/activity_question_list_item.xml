@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:id="@+id/radioPicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tmpremark"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ques_layout">
+
+
+            <RelativeLayout
+                android:id="@+id/true_false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:id="@+id/correct_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:lineSpacingExtra="5dp"
+                        android:padding="5dp"
+
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/_false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:lineSpacingExtra="5dp"
+                        android:padding="5dp"
+
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/_na"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:padding="5dp"
+                        android:text="N/A"
+                        android:textSize="20dp"
+                        android:visibility="gone" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/comment_text"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="4dp"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="Enter the Answer"
+                    android:inputType="textMultiLine"
+                    android:lines="10"
+                    android:visibility="visible">
+
+                    <requestFocus />
+                </EditText>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/multiselect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/checklist_answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"></android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tmpremark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/options"
+            android:visibility="gone">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ques_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_ques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="1dp"
+                android:text="Q1) Who Present in IT team?"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioPicture"
+            android:layout_marginLeft="3dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/addClickImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/camera"
+                android:contentDescription="click to capture"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@id/imageView1"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+
+                android:layout_toRightOf="@+id/imageView2"
+
+                android:gravity="center"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:gravity="center"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@+id/imageView4"
+                android:gravity="center"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/root"
+        android:background="#dadada"/>
+
+
+</RelativeLayout>
